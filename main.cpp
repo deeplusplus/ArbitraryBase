@@ -39,15 +39,15 @@ std::string itoa(int value, unsigned int base) {
 
 int main()
 {
-    int input;
+    int input, base;
 
     cout << "Input int: ";
     cin >> input;
 
-    cout << "Input as base 2: " + itoa(input, 2) + "\n";
-    cout << "Input as base 4: " + itoa(input, 4) + "\n";
-    cout << "Input as base 8: " + itoa(input, 8) + "\n";
-    cout << "Input as base 16: " + itoa(input, 16) + "\n";
+    cout << "What base do you want to convert to?";
+    cin >> base;
+
+    cout << to_string(input) + " as base " + to_string(base) +  ": " + itoa(input, base) + "\n";
 
     return 0;
 }
